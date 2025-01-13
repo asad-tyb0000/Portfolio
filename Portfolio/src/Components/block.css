@@ -1,0 +1,23 @@
+
+.blockdiv{
+  
+  width: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+  background-color: rgb(31, 28, 25);
+  border-radius: 7px;
+  margin-top: 60px;
+  box-shadow: 0 4px 10px rgba(20, 18, 16, 0.8);
+}
+.nameHeading{
+  color: bisque;
+  text-align: left;
+  padding: 5%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+  
