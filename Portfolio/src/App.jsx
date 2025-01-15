@@ -1,16 +1,13 @@
 import { useState } from 'react'
-import Block from './Components/block.jsx'
-import SBlock from './Components/sblock.jsx'
 import './App.css'
-
+import Header from "./Components/header.jsx"
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <div class = "flexContainer">
-        <Block />
-        <SBlock />
+        <Header />
       </div>
     </>
   )
