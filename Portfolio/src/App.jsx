@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import Header from "./Components/header.jsx"
-function App() {
-  const [count, setCount] = useState(0)
+import { useState } from 'react';
+import './App.css';
+import Header from './Components/header.jsx';
 
-  return (
-    <>
-      <div class = "flexContainer">
-        <Header />
-      </div>
-    </>
-  )
+function App() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <div className="flexContainer">
+            <Header />
+        </div>
+    );
 }
 
-export default App
+export default App;

@@ -1,5 +1,12 @@
-:root {
+html, body {
   margin: 0;
   padding: 0;
-  /* background-color: #02130e; */
+  width: 100%;
+  height: 100%; /* Make sure it occupies the full screen */
+  box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+#root {
+  width: 100%;
+  height: 100%; /* Make the React root div occupy the full screen */
 }

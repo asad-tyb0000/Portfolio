@@ -1,0 +1,84 @@
+.flexconhead {
+    display: flex;
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    justify-content: space-between; /* Keeps headerName on the left and headercompscont centered */
+    align-items: center; /* Vertically centers all items */
+    padding: 0 20px; /* Adds spacing to the edges */
+    position: relative;
+    border-bottom: 1px solid rgba(204, 197, 197, 0.692);
+}
+
+.headerName {
+    color: rgb(118, 216, 148);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    padding-left: 10px; /* Keeps headerName aligned to the left */
+}
+
+.headercompscont {
+    position: absolute; /* Absolute positioning for central alignment */
+    left: 50%; /* Move the container to the center horizontally */
+    transform: translateX(-50%); /* Adjust position to truly center the container */
+    display: flex;
+    justify-content: center; /* Ensures icons are evenly spaced */
+    align-items: center; /* Centers icons vertically */
+    column-gap: 40px; /* Space between icons */
+}
+
+.headercomps {
+    position: relative; /* For the hover effect line */
+    transition: color 0.3s ease, font-size 0.3s ease;
+    align-self: center;
+}
+
+.headercomps a {
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(197, 204, 211); /* Default color for links */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    white-space: nowrap;
+    padding: 2%;
+    display: inline-block; /* Ensures proper hover area */
+}
+
+.headercomps a:hover {
+    color: azure; /* Change text color on hover */
+}
+
+.headercomps::after {
+    content: ''; /* Add the green line */
+    position: absolute;
+    left: 0;
+    bottom: -100%; /* Adjust to align just above the white border */
+    width: 0; /* Start with no line */
+    height: 2px;
+    background-color: rgb(118, 216, 148); /* Green color for the line */
+    transition: width 0.3s ease; /* Smooth line animation */
+}
+
+.headercomps:hover::after {
+    width: 100%; /* Expand the line to full width on hover */
+}
+
+.headerButton {
+    padding: 10px 20px;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(55, 221, 105); /* Green background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.headerButton:hover {
+    background-color: rgb(43, 150, 78); /* Slightly darker green on hover */
+    transform: scale(1.05); /* Add a scaling effect */
+}
+
+.headerButton:active {
+    transform: scale(0.95); /* Button shrinks slightly when clicked */
+}
