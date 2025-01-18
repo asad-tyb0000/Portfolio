@@ -1,13 +1,13 @@
-import React from 'react';
-import Header from './header.jsx';
+import React from "react";
+import "../Styles/Projects.css";
 
-function About() {
+function Projects() {
   return (
-    <div>
-      <Header />
-      
+    <div id="projects" className="projects-section">
+      <h1 className="head1">Projects</h1>
+      {/* Add project details */}
     </div>
   );
 }
 
-export default About;
+export default Projects;

@@ -1,10 +1,114 @@
 html, body {
-    height: 100%;
-    margin: 0;
+    height: 100%; /* Make sure the body takes full height */
+    margin: 0; /* Remove default margin to prevent spacing issues */
     padding: 0;
-  }
+    background-color: transparent; /* Add a background color */
+    color: white; /* Set the default font color to white */
+    font-family: Arial, sans-serif; /* Optional: Set a default font family */
+}
 
-  .homemain{
-    margin: 0;
-    width: 100%;
-  }
+.Homemain {
+    display: block;
+}
+
+.fleximg{
+    display: flex;
+}
+/* Keep the styles for the body and other elements as is */
+
+.imgbg {
+    width: 400px;
+    height: auto;
+    animation: slideInImage 2s ease-out forwards; /* Add the animation here */
+}
+
+.imgadj {
+    margin-top: 20px;
+    margin-left: 10vw;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Container to center text */
+.text-container {
+    margin-top: 120px;
+    text-align: left;
+    font-family: fantasy;
+    font-size: 3.5rem;
+    color: white;
+    line-height: 1.2;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.text-container2 {
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.2;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    overflow: hidden;
+    border-left: 3px solid #4caf50;
+}
+
+/* Animated text */
+.animated-text {
+    animation: slideIn 2s ease-out forwards; /* Slide and fade in animation */
+    filter: blur(5px); /* Start with blurred text */
+}
+
+.animated-text2 {
+    animation: slideIn 2s ease-out forwards;
+    filter: blur(5px); /* Start with blurred text */
+}
+
+/* Highlighted text */
+.highlight {
+    color: #4caf50; /* Green color for highlighted words */
+}
+
+/* Keyframes for text animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px); /* Start above the container */
+        opacity: 0; /* Fully transparent */
+        filter: blur(3px); /* Blurred text */
+    }
+    30% {
+        transform: translateY(0); /* Move to original position */
+        opacity: 0.5; /* Partially visible */
+        filter: blur(1px); /* Slight blur */
+    }
+    100% {
+        transform: translateY(0); /* Final position */
+        opacity: 1; /* Fully visible */
+        filter: blur(0); /* Clear text */
+    }
+}
+
+/* Keyframes for image animation without blur */
+@keyframes slideInImage {
+    0% {
+        transform: translateY(-50px); /* Start above the container */
+        opacity: 0; /* Fully transparent */
+    }
+    30% {
+        transform: translateY(0); /* Move to original position */
+        opacity: 0.5; /* Partially visible */
+    }
+    100% {
+        transform: translateY(0); /* Final position */
+        opacity: 1; /* Fully visible */
+    }
+}

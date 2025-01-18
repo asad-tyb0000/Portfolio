@@ -13,13 +13,14 @@ html, body {
     height: 100px;
     justify-content: space-between; /* Evenly spaces the elements */
     align-items: center; /* Vertically centers all items */
-    padding: 0 20px; /* Prevent excessive spacing at the edges */
+    padding: 0 20px; /* Adjust padding to control spacing on sides */
     position: fixed; /* Keep it fixed at the top */
     top: 0;
     left: 0;
     border-bottom: 1px solid rgba(204, 197, 197, 0.692);
     z-index: 10;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box; /* Keep padding in width calculation */
+    overflow: hidden; /* Prevent content overflow affecting width */
 }
 
 

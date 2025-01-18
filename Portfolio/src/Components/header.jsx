@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import "../Styles/header.css";
 
 function Header() {
@@ -9,16 +8,16 @@ function Header() {
       </div>
       <div className="headercompscont">
         <div className="headercomps">
-          <Link to="/">Home</Link> {/* Use Link for navigation */}
+          <a href="#home">Home</a> {/* Link to Home section */}
         </div>
         <div className="headercomps">
-          <Link to="/about">About me</Link> {/* Link to About page */}
+          <a href="#about">About me</a> {/* Link to About section */}
         </div>
         <div className="headercomps">
-          <Link to="/projects">Service</Link> {/* Link to Service page */}
+          <a href="#service">Service</a> {/* Link to Service section */}
         </div>
         <div className="headercomps">
-          <Link to="/projects">Projects</Link> {/* Link to Projects page */}
+          <a href="#projects">Projects</a> {/* Link to Projects section */}
         </div>
       </div>
       <div className="button-container">

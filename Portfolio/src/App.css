@@ -2,14 +2,16 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .mainApp {
   display: flex; /* Consider using flex for layout adjustments */
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  height: 100%; /* Fill the entire screen */
+  height: auto;
   padding: 0;
   background-color: #0B0D0E;
   margin: 0;
