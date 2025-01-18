@@ -1,14 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .flexconhead {
     display: flex;
     background-color: transparent;
-    width: 100%;
+    width: 100%; /* Ensure it spans the full width */
     height: 100px;
-    justify-content: space-between; /* Keeps headerName on the left and headercompscont centered */
+    justify-content: space-between; /* Evenly spaces the elements */
     align-items: center; /* Vertically centers all items */
-    padding: 0 20px; /* Adds spacing to the edges */
-    position: relative;
+    padding: 0 20px; /* Prevent excessive spacing at the edges */
+    position: fixed; /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
     border-bottom: 1px solid rgba(204, 197, 197, 0.692);
+    z-index: 10;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
+
+
 
 .headerName {
     color: rgb(118, 216, 148);
@@ -18,14 +32,13 @@
 }
 
 .headercompscont {
-    position: absolute; /* Absolute positioning for central alignment */
-    left: 50%; /* Move the container to the center horizontally */
-    transform: translateX(-50%); /* Adjust position to truly center the container */
     display: flex;
-    justify-content: center; /* Ensures icons are evenly spaced */
-    align-items: center; /* Centers icons vertically */
-    column-gap: 40px; /* Space between icons */
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    margin: 0 auto; /* Centers within the parent flex container */
 }
+
 
 .headercomps {
     position: relative; /* For the hover effect line */
@@ -67,18 +80,44 @@
     font-size: medium;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
-    background-color: rgb(55, 221, 105); /* Green background color */
+    background-color: rgb(55, 221, 105); /* Green background */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    max-width: 150px; /* Prevent it from being too wide */
+    overflow: hidden; /* Ensure text doesn’t overflow */
+    text-align: center; /* Center the text */
 }
 
 .headerButton:hover {
-    background-color: rgb(43, 150, 78); /* Slightly darker green on hover */
-    transform: scale(1.05); /* Add a scaling effect */
+    background-color: rgb(43, 150, 78);
+    transform: scale(1.05);
 }
 
 .headerButton:active {
-    transform: scale(0.95); /* Button shrinks slightly when clicked */
+    transform: scale(0.95);
 }
+
+
+.button-container {
+    margin: 0; /* Remove unnecessary margins */
+    padding: 0; /* Remove extra padding */
+    display: flex; /* Ensure alignment with flexbox */
+    justify-content: flex-end; /* Align to the right */
+    align-items: center;
+    width: auto; /* Prevent overflow by setting width dynamically */
+}
+
+
+@media (max-width: 768px) {
+    .headercompscont {
+        column-gap: 20px; /* Reduce gap between items */
+    }
+
+    .headerButton {
+        padding: 8px 16px; /* Smaller button padding */
+        font-size: small; /* Smaller font */
+    }
+}
+

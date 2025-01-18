@@ -1,5 +1,11 @@
-.flexContainer {
-  display: flex;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.mainApp {
+  display: flex; /* Consider using flex for layout adjustments */
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
@@ -7,4 +13,5 @@
   padding: 0;
   background-color: #0B0D0E;
   margin: 0;
+  position: relative;
 }

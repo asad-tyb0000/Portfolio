@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './Components/header.jsx';
+import Home from './Components/Home';
+import About from './Components/About';
+import Projects from './Components/Projects';
 
 function App() {
-    const [count, setCount] = useState(0);
-
-    return (
-        <div className="flexContainer">
-            <Header />
-        </div>
-    );
+  return (
+    <Router>
+      <div className="mainApp">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

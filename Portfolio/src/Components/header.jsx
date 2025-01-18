@@ -1,34 +1,30 @@
-import { useState } from "react";
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import "../Styles/header.css";
 
 function Header() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div class="flexconhead">
-        <div class="headerName">
-          <p>Asad Tayyab</p>
+    <div className="flexconhead">
+      <div className="headerName">
+        <p>Asad Tayyab</p>
+      </div>
+      <div className="headercompscont">
+        <div className="headercomps">
+          <Link to="/">Home</Link> {/* Use Link for navigation */}
         </div>
-        <div class="headercompscont">
-          <div class="headercomps">
-            <a href="#home">Home</a>
-          </div>
-          <div class="headercomps">
-            <a href="#about">About me</a>
-          </div>
-          <div class="headercomps">
-            <a href="#projects">Service</a>
-          </div>
-          <div class="headercomps">
-            <a href="#projects">Projects</a>
-          </div>
+        <div className="headercomps">
+          <Link to="/about">About me</Link> {/* Link to About page */}
         </div>
-        <div class="button-container">
-          <button class="headerButton">Contact Me</button>
+        <div className="headercomps">
+          <Link to="/projects">Service</Link> {/* Link to Service page */}
+        </div>
+        <div className="headercomps">
+          <Link to="/projects">Projects</Link> {/* Link to Projects page */}
         </div>
       </div>
-    </>
+      <div className="button-container">
+        <button className="headerButton">Contact Me</button>
+      </div>
+    </div>
   );
 }
 
