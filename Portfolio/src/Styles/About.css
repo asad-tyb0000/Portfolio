@@ -4,44 +4,91 @@
     height:100%;
     margin:0;
     background-color: transparent; /* Optional: Set background color */
+    
   }
   
- 
-  .text-container {
-    margin-top: 120px;
+
+.emptyGap{
+    margin-top: auto;
+    background-color: transparent;
+    height: 150px;
+}
+.Headingmain{
     text-align: left;
     font-family: fantasy;
     font-size: 3.5rem;
     color: white;
-    line-height: 1.2;
-    height: 40vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
     background-color: transparent;
     overflow: hidden;
-}
-.animated-text {
-    animation: slideIn 2s ease-out forwards; /* Slide and fade in animation */
-    filter: blur(5px); /* Start with blurred text */
-}
-.highlight {
+ }
+
+ .highlight {
     color: #4caf50; /* Green color for highlighted words */
 }
-@keyframes slideIn {
-    0% {
-        transform: translateY(-50px); /* Start above the container */
-        opacity: 0; /* Fully transparent */
-        filter: blur(3px); /* Blurred text */
-    }
-    30% {
-        transform: translateY(0); /* Move to original position */
-        opacity: 0.5; /* Partially visible */
-        filter: blur(1px); /* Slight blur */
-    }
-    100% {
-        transform: translateY(0); /* Final position */
-        opacity: 1; /* Fully visible */
-        filter: blur(0); /* Clear text */
-    }
+
+.aboutText{
+    width: auto;
+    text-align: left;
+    /* align-items: center; */
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    border-left: 3px solid #4caf50 ;
+    background-color: transparent;
+    overflow: hidden;
+    /* justify-content: rigth; */
+}
+
+.button-container {
+    margin-left: 25vw;
+    margin-top: 0%;
+    padding: 0; /* Remove extra padding */
+    display: flex; /* Ensure alignment with flexbox */
+    justify-content: flex-end; /* Align to the right */
+    align-items: center;
+    width: auto; /* Prevent overflow by setting width dynamically */
+}
+
+.cvButton {
+    padding: 10px 20px;
+    width: auto;
+    height: 60px;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(55, 221, 105); /* Green background */
+    border: 1px solid rgb(55, 221, 105);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex; /* Enable flexbox for content alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    gap: 10px; /* Space between text and image */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.cvButton:hover {
+    background-color: transparent;
+    transform: scale(1.05);
+}
+
+.cvButton:active {
+    transform: scale(0.95);
+}
+
+.buttonImage {
+    width: 20px; /* Adjust size of the image */
+    height: 20px; /* Adjust size of the image */
+    margin-left: 10px; /* Add space between text and image */
+}
+
+
+.flexcont{
+    display: flex;
 }
